@@ -5,10 +5,8 @@
     Time: 12:12pm
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 public class Pet {
 
@@ -85,5 +83,56 @@ public class Pet {
             this.Colour = Colour;
         else
             throw new IllegalArgumentException(Colour + "The colour you've enter is not valid. These are your options" +validColours);
+    }
+
+    //this method returns a string that represents the pet sounds
+    public String Speak(){
+        if (Type == "woof woof")
+            return "dog";
+        else if(Type == "meow, meow")
+            return "cat";
+        else if (Type == "chirp, chip")
+            return "bird";
+        else if(Type == "hiss")
+            return "reptile";
+        else if(Type == "swimming sound")
+            return "fish";
+        return Speak();
+    }
+
+    //this method returns a string that represents the pet movements
+    public String movesBy(){
+        if (Type == "walks or runs")
+            return "dog";
+        else if(Type == "walks or runs")
+            return "cat";
+        else if (Type == "flies")
+            return "bird";
+        else if(Type == "slither or walk")
+            return "reptile";
+        else if(Type == "swim")
+            return "fish";
+        return movesBy();
+    }
+
+    //this method returns a boolean to represent if the pet has fur
+    //Couldn't understand how to do the boolean return method
+    /*public boolean hasFur(){
+        if(Type = true)
+            return hasFur();
+        else if(Type = true)
+            return hasFur();
+        else if(Type = false)
+            return hasFur();
+         else if(Type = false)
+            return hasFur();
+         else if(Type = false)
+            return hasFur();
+
+    }*/
+
+    public String toString(){
+
+        return Name + "is age" + Age + Colour + Type;
     }
 }
