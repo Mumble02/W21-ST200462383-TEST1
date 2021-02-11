@@ -32,9 +32,10 @@ public class Pet {
         return Name;
     }
 
-    public void setName(String name) {
-        if(name.length() >= 2)
-            this.Name = name;
+    //name validation
+    public void setName(String Name) {
+        if(Name.length() >= 2)
+            this.Name = Name;
         else
             throw new IllegalArgumentException("Name must be at least 2 characters or more");
     }
@@ -43,11 +44,12 @@ public class Pet {
         return Type;
     }
 
+    //type array list
     public static List<String> getTypes(){
         return Arrays.asList("dog", "cat", "bird", "reptile", "fish");
     }
 
-
+    //type validation
     public void setType(String Type) {
         Type = Type.toLowerCase();
         List<String> validTypes = getTypes();
@@ -61,6 +63,7 @@ public class Pet {
         return Age;
     }
 
+    //age validation
     public void setAge(int Age) {
         if (Age >= 0 && Age <=60)
             this.Age = Age;
@@ -72,10 +75,12 @@ public class Pet {
         return Colour;
     }
 
+    //colour array list
     public static List<String> getColours(){
         return Arrays.asList("yellow", "brown", "black", "red", "white", "grey");
     }
 
+    //colour validation
     public void setColour(String Colour) {
         Colour = Colour.toLowerCase();
         List<String> validColours = getColours();
@@ -131,6 +136,7 @@ public class Pet {
 
     }*/
 
+    //a method that uses a toString method
     public String toString(){
 
         return Name + "is age" + Age + Colour + Type;
